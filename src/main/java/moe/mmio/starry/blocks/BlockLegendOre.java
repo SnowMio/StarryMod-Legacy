@@ -15,7 +15,7 @@ public class BlockLegendOre extends Block {
 
     public BlockLegendOre(Material material) {
         super(Material.rock);
-        this.setHardness(20.0f);
+        this.setHardness(17.0f);
         this.setResistance(25.0f);
         this.setBlockName("legend_ore");
         this.setBlockTextureName(StarryMod.MODID + ":legend_ore");
@@ -26,7 +26,7 @@ public class BlockLegendOre extends Block {
     public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune) {
         ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
 
-        drops.add(new ItemStack(ModItems.legend_ingot, 1));
+        drops.add(new ItemStack(ModItems.legend_ore, 1));
 
         return drops;
     }

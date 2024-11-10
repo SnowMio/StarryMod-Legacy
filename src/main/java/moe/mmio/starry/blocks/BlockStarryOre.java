@@ -30,7 +30,7 @@ public class BlockStarryOre extends Block {
 
     public BlockStarryOre(Material material) {
         super(material.iron);        // 材质:铁块
-        this.setHardness(15.0f);
+        this.setHardness(13.0f);
         this.setResistance(15.0f);
         this.setBlockName("starry_ore");
         this.setBlockTextureName(StarryMod.MODID + ":starry_ore");
@@ -78,7 +78,7 @@ public class BlockStarryOre extends Block {
         ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
 
         // 添加掉落物
-        drops.add(new ItemStack(ModItems.starry_ingot, 1));
+        drops.add(new ItemStack(ModItems.starry_ore, 1));
 
         return drops;
     }
