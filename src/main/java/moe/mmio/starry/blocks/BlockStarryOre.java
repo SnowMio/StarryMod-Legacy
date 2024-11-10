@@ -30,7 +30,7 @@ public class BlockStarryOre extends Block {
 
     public BlockStarryOre(Material material) {
         super(material.iron);        // 材质:铁块
-        this.setHardness(25.0f);
+        this.setHardness(15.0f);
         this.setResistance(15.0f);
         this.setBlockName("starry_ore");
         this.setBlockTextureName(StarryMod.MODID + ":starry_ore");

@@ -1,6 +1,8 @@
 package moe.mmio.starry;
 
 import moe.mmio.starry.items.ModItems;
+import moe.mmio.starry.recipes.ModRecipes;
+import moe.mmio.starry.worldgen.ModGeneratorRegistry;
 import net.minecraft.init.Blocks;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -16,7 +18,7 @@ public class StarryMod
     public void init(FMLInitializationEvent event)
     {
         ModItems.mainRegistry();
-        // some example code
-        System.out.println("DIRT BLOCK >> "+Blocks.dirt.getUnlocalizedName());
+        ModGeneratorRegistry.initializeGenerators();
+        ModRecipes.recipesRegistry();
     }
 }
