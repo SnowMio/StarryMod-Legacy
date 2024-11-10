@@ -5,8 +5,7 @@ import moe.mmio.starry.StarryMod;
 import moe.mmio.starry.blocks.BlockLegendOre;
 import moe.mmio.starry.blocks.BlockStarryOre;
 import moe.mmio.starry.creativetabs.ModCreativeTabs;
-import moe.mmio.starry.tools.ItemLegendSword;
-import moe.mmio.starry.tools.ItemStarrySword;
+import moe.mmio.starry.tools.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -24,7 +23,11 @@ public class ModItems {
     public static Item legend_ingot;
 
     public static Item starry_sword;
+    public static Item starry_pickaxe;
+    public static Item starry_axe;
     public static Item legend_sword;
+    public static Item legend_pickaxe;
+    public static Item legend_axe;
 
     public static Block starry_ore;
     public static Block legend_ore;
@@ -34,7 +37,11 @@ public class ModItems {
         legend_ingot = new Item().setUnlocalizedName("legend_ingot").setMaxStackSize(64).setCreativeTab(StarryModCreativeTab).setTextureName(StarryMod.MODID + ":legend_ingot");
 
         starry_sword = new ItemStarrySword().setCreativeTab(StarryModCreativeTab);
+        starry_pickaxe = new ItemStarryPickaxe().setCreativeTab(StarryModCreativeTab);
+        starry_axe = new ItemStarryAxe().setCreativeTab(StarryModCreativeTab);
         legend_sword = new ItemLegendSword().setCreativeTab(StarryModCreativeTab);
+        legend_pickaxe = new ItemLegendPickaxe().setCreativeTab(StarryModCreativeTab);
+        legend_axe = new ItemLegendAxe().setCreativeTab(StarryModCreativeTab);
 
         starry_ore = new BlockStarryOre(Material.iron).setCreativeTab(StarryModCreativeTab);
         legend_ore = new BlockLegendOre(Material.rock).setCreativeTab(StarryModCreativeTab);
@@ -45,7 +52,11 @@ public class ModItems {
         GameRegistry.registerItem(legend_ingot, legend_ingot.getUnlocalizedName());
 
         GameRegistry.registerItem(starry_sword, starry_sword.getUnlocalizedName());
+        GameRegistry.registerItem(starry_pickaxe, starry_pickaxe.getUnlocalizedName());
+        GameRegistry.registerItem(starry_axe, starry_axe.getUnlocalizedName());
         GameRegistry.registerItem(legend_sword, legend_sword.getUnlocalizedName());
+        GameRegistry.registerItem(legend_pickaxe, legend_pickaxe.getUnlocalizedName());
+        GameRegistry.registerItem(legend_axe, legend_axe.getUnlocalizedName());
 
         GameRegistry.registerBlock(starry_ore, starry_ore.getUnlocalizedName());
         GameRegistry.registerBlock(legend_ore, legend_ore.getUnlocalizedName());
