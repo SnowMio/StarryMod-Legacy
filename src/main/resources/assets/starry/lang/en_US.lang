@@ -1,6 +1,11 @@
 item.starry_ingot.name=Starry Ingot
 item.legend_ingot.name=Legend Ingot
 item.starry_sword.name=Starry Sword
+item.legend_sword.name=Legend Sword
+item.starry_pickaxe.name=Starry Pickaxe
+item.legend_pickaxe.name=Legend Pickaxe
+item.starry_axe.name=Starry Axe
+item.legend_axe.name=Legend Axe
 tile.starry_ore.name=Starry Ore
 tile.legend_ore.name=Legend Ore
 itemGroup.starrymod_tab=Starry Mod

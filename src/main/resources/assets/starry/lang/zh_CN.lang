@@ -1,6 +1,11 @@
 item.starry_ingot.name=幻星锭
 item.legend_ingot.name=神圣金属锭
 item.starry_sword.name=幻星剑
+item.legend_sword.name=神圣剑
+item.starry_pickaxe.name=星辉之镐
+item.legend_pickaxe.name=神圣金属镐
+item.starry_axe.name=星辉之斧
+item.legend_axe.name=神圣金属斧
 tile.starry_ore.name=幻星矿
 tile.legend_ore.name=神圣金属矿
 itemGroup.starrymod_tab=Starry Mod
