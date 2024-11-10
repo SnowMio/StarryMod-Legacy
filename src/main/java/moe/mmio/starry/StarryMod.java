@@ -9,7 +9,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 @Mod(modid = StarryMod.MODID, version = StarryMod.VERSION)
 public class StarryMod
 {
-    public static final String MODID = "StarryMod";
+    public static final String MODID = "starry";
     public static final String VERSION = "1.0";
 
     @EventHandler
