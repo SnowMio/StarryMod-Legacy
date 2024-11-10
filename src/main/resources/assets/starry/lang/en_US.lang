@@ -1,2 +1,5 @@
 item.starry_ingot.name=Starry Ingot
+item.legend_ingot.name=Legend Ingot
 tile.starry_ore.name=Starry Ore
+tile.legend_ore.name=Legend Ore
+itemGroup.starrymod_tab=Starry Mod
