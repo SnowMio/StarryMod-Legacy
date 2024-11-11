@@ -1,5 +1,6 @@
 package moe.mmio.starry.worldgen;
 
+import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.IWorldGenerator;
 import moe.mmio.starry.items.ModItems;
 import net.minecraft.world.World;
@@ -23,10 +24,11 @@ public class GeneratorObsidianOre implements IWorldGenerator {
     }
 
     private void generateNether(World world, Random random, int x, int z) {
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < 9; i++) {
             int genX = x + random.nextInt(16);
             int genY = 5 + random.nextInt(64);
             int genZ = z + random.nextInt(16);
+            FMLLog.info("Generating obsidian_ore at %d %d %d", genX, genY, genZ);
             new WorldGenMinable(ModItems.obsidian_ore, 1 + random.nextInt(4)).generate(world, random, genX, genY, genZ);
         }
     }
