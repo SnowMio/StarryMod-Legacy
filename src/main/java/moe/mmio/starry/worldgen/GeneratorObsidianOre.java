@@ -15,17 +15,17 @@ public class GeneratorObsidianOre implements IWorldGenerator {
             case 0:
                 break;
             case -1:
+                generateNether(world, random, chunkX * 16, chunkZ * 16);
                 break;
             case 1:
-                generateTheEnd(world, random, chunkX * 16, chunkZ * 16);
                 break;
         }
     }
 
-    private void generateTheEnd(World world, Random random, int x, int z) {
-        for (int i = 0; i < 6; i++) {
+    private void generateNether(World world, Random random, int x, int z) {
+        for (int i = 0; i < 8; i++) {
             int genX = x + random.nextInt(16);
-            int genY = 5 + random.nextInt(128);
+            int genY = 5 + random.nextInt(64);
             int genZ = z + random.nextInt(16);
             new WorldGenMinable(ModItems.obsidian_ore, 1 + random.nextInt(4)).generate(world, random, genX, genY, genZ);
         }
