@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "starry",
+  "name": "Starry",
+  "description": "Survive, QoL, etc...",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "hps://github.com/SnowMio/StarryMod-Legacy/",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["MinimalMio"],
+  "credits": "The SnowMio Studios",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

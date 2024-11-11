@@ -3,6 +3,7 @@ package moe.mmio.starry.items;
 import cpw.mods.fml.common.registry.GameRegistry;
 import moe.mmio.starry.StarryMod;
 import moe.mmio.starry.blocks.BlockLegendOre;
+import moe.mmio.starry.blocks.BlockObsidianOre;
 import moe.mmio.starry.blocks.BlockStarryOre;
 import moe.mmio.starry.creativetabs.ModCreativeTabs;
 import moe.mmio.starry.tools.*;
@@ -31,6 +32,7 @@ public class ModItems {
 
     public static Block starry_ore;
     public static Block legend_ore;
+    public static Block obsidian_ore;
 
     public static void initializeItem() {
         starry_ingot = new Item().setUnlocalizedName("starry_ingot").setMaxStackSize(64).setCreativeTab(StarryModCreativeTab).setTextureName(StarryMod.MODID + ":starry_ingot");
@@ -45,6 +47,7 @@ public class ModItems {
 
         starry_ore = new BlockStarryOre(Material.iron).setCreativeTab(StarryModCreativeTab);
         legend_ore = new BlockLegendOre(Material.rock).setCreativeTab(StarryModCreativeTab);
+        obsidian_ore = new BlockObsidianOre(Material.rock).setCreativeTab(StarryModCreativeTab);
     }
 
     public static void registerItems() {
@@ -60,5 +63,6 @@ public class ModItems {
 
         GameRegistry.registerBlock(starry_ore, starry_ore.getUnlocalizedName());
         GameRegistry.registerBlock(legend_ore, legend_ore.getUnlocalizedName());
+        GameRegistry.registerBlock(obsidian_ore, obsidian_ore.getUnlocalizedName());
     }
 }
