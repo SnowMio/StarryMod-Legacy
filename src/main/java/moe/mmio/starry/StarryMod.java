@@ -3,6 +3,7 @@ package moe.mmio.starry;
 import moe.mmio.starry.events.EventNoCreeperGriefingBlocks;
 import moe.mmio.starry.items.ModItems;
 import moe.mmio.starry.recipes.ModRecipes;
+import moe.mmio.starry.recipes.ModifyedRecipes;
 import moe.mmio.starry.worldgen.ModGeneratorRegistry;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -25,7 +26,6 @@ public class StarryMod
         ModItems.mainRegistry();
         ModGeneratorRegistry.initializeGenerators();
         ModRecipes.recipesRegistry();
-
         // 事件注册
         MinecraftForge.EVENT_BUS.register(new EventNoCreeperGriefingBlocks());
     }

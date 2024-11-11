@@ -9,6 +9,7 @@ public class ModRecipes {
     public static void recipesRegistry() {
         initializeFurnaceRecipes();
         initializeCraftTableRecipes();
+        ModifyedRecipes.modifyVanillaRecipesMain();
     }
 
     public static void initializeFurnaceRecipes() {
