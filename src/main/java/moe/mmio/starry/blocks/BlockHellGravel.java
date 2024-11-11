@@ -19,9 +19,11 @@ public class BlockHellGravel extends BlockFalling {
 
     public BlockHellGravel(Material material) {
         super(Material.sand);
+        this.setHardness(5.0f);
         this.setBlockName("hell_gravel");
         this.setBlockTextureName(StarryMod.MODID + ":hell_gravel");
         this.setHarvestLevel("shovel", 0);
+        this.setStepSound(soundTypeGravel);
     }
 
     @Override
