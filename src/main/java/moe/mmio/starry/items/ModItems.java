@@ -2,12 +2,14 @@ package moe.mmio.starry.items;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import moe.mmio.starry.StarryMod;
+import moe.mmio.starry.blocks.BlockHellGravel;
 import moe.mmio.starry.blocks.BlockLegendOre;
 import moe.mmio.starry.blocks.BlockObsidianOre;
 import moe.mmio.starry.blocks.BlockStarryOre;
 import moe.mmio.starry.creativetabs.ModCreativeTabs;
 import moe.mmio.starry.tools.*;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFalling;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -34,6 +36,8 @@ public class ModItems {
     public static Block legend_ore;
     public static Block obsidian_ore;
 
+    public static BlockFalling hell_gravel;
+
     public static void initializeItem() {
         starry_ingot = new Item().setUnlocalizedName("starry_ingot").setMaxStackSize(64).setCreativeTab(StarryModCreativeTab).setTextureName(StarryMod.MODID + ":starry_ingot");
         legend_ingot = new Item().setUnlocalizedName("legend_ingot").setMaxStackSize(64).setCreativeTab(StarryModCreativeTab).setTextureName(StarryMod.MODID + ":legend_ingot");
@@ -48,6 +52,8 @@ public class ModItems {
         starry_ore = new BlockStarryOre(Material.iron).setCreativeTab(StarryModCreativeTab);
         legend_ore = new BlockLegendOre(Material.rock).setCreativeTab(StarryModCreativeTab);
         obsidian_ore = new BlockObsidianOre(Material.rock).setCreativeTab(StarryModCreativeTab);
+
+        hell_gravel = (BlockFalling) new BlockHellGravel(Material.sand).setCreativeTab(StarryModCreativeTab);
     }
 
     public static void registerItems() {
@@ -64,5 +70,7 @@ public class ModItems {
         GameRegistry.registerBlock(starry_ore, starry_ore.getUnlocalizedName());
         GameRegistry.registerBlock(legend_ore, legend_ore.getUnlocalizedName());
         GameRegistry.registerBlock(obsidian_ore, obsidian_ore.getUnlocalizedName());
+
+        GameRegistry.registerBlock(hell_gravel, hell_gravel.getUnlocalizedName());
     }
 }

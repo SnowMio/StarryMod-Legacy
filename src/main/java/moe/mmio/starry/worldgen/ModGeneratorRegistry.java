@@ -7,5 +7,6 @@ public class ModGeneratorRegistry {
         GameRegistry.registerWorldGenerator(new GeneratorStarryOre(), 1);
         GameRegistry.registerWorldGenerator(new GeneratorLegendOre(), 1);
         GameRegistry.registerWorldGenerator(new GeneratorObsidianOre(), 0);
+        GameRegistry.registerWorldGenerator(new GeneratorHellGravel(), 0);
     }
 }
