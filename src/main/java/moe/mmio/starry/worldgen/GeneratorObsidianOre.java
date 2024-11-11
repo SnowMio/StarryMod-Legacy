@@ -1,12 +1,10 @@
 package moe.mmio.starry.worldgen;
 
-import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.IWorldGenerator;
 import moe.mmio.starry.items.ModItems;
+import moe.mmio.starry.worldgen.genfunc.GeneratorOreTheEnd;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraft.world.gen.feature.WorldGenMinable;
-import net.minecraft.world.gen.feature.WorldGenerator;
 
 import java.util.Random;
 
@@ -17,9 +15,9 @@ public class GeneratorObsidianOre implements IWorldGenerator {
             case 0:
                 break;
             case -1:
-                generateTheEnd(world, random, chunkX * 16, chunkZ * 16);
                 break;
             case 1:
+                generateTheEnd(world, random, chunkX * 16, chunkZ * 16);
                 break;
         }
     }
