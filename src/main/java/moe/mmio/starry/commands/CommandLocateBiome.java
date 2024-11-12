@@ -41,7 +41,7 @@ public class CommandLocateBiome extends CommandBase {
         }
 
         EntityPlayer player = (EntityPlayer) sender;
-        int searchRadius = 150;
+        int searchRadius = 500;
         int closestX = -1, closestZ = -1;
         double closestDistance = Double.MAX_VALUE;
 

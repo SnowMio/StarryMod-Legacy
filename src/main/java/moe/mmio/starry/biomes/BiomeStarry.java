@@ -23,6 +23,21 @@ public class BiomeStarry extends BiomeGenBase {
         this.setBiomeName("Starry");
         this.setTemperatureRainfall(0.8f, 0.4f);
 
+        this.theBiomeDecorator.goldGen = null;
+        this.theBiomeDecorator.gravelGen = null;
+        this.theBiomeDecorator.diamondGen = null;
+        this.theBiomeDecorator.lapisGen = null;
+        this.theBiomeDecorator.redstoneGen = null;
+        this.theBiomeDecorator.ironGen = null;
+        this.theBiomeDecorator.coalGen = null;
+
+        this.theBiomeDecorator.treesPerChunk = 0;
+        this.theBiomeDecorator.generateLakes = false;
+        this.theBiomeDecorator.flowersPerChunk = 0;
+        this.theBiomeDecorator.grassPerChunk = 0;
+
+        this.theBiomeDecorator.gravelAsSandGen = null;
+
         this.spawnableMonsterList.clear();
         this.spawnableCaveCreatureList.clear();
         this.spawnableCreatureList.clear();
@@ -52,9 +67,9 @@ public class BiomeStarry extends BiomeGenBase {
                                 world.setBlock(x, y, z, ModItems.starry_stone);
                             }
 
-                            if (rand.nextInt(100) < 5) {
+                            if (rand.nextInt(100) < 65) {
                                 world.setBlock(x, y, z, ModItems.starry_ore);
-                            } else if (rand.nextInt(100) < 3) {
+                            } else if (rand.nextInt(100) < 50) {
                                 world.setBlock(x, y, z, ModItems.legend_ore);
                             }
                         }
