@@ -6,6 +6,7 @@ import moe.mmio.starry.biomes.BiomeStarry;
 import moe.mmio.starry.biomes.ModBiomes;
 import moe.mmio.starry.commands.CommandLocateBiome;
 import moe.mmio.starry.commands.CommandQueryBiomeID;
+import moe.mmio.starry.effects.ModEffects;
 import moe.mmio.starry.events.EventNoCreeperGriefingBlocks;
 import moe.mmio.starry.items.ModItems;
 import moe.mmio.starry.recipes.ModRecipes;
@@ -29,6 +30,7 @@ public class StarryMod
     public void init(FMLInitializationEvent event)
     {
         ModItems.mainRegistry();
+        ModEffects.initEffects();
         ModGeneratorRegistry.initializeGenerators();
         ModRecipes.recipesRegistry();
         ModBiomes.initModBiomes();

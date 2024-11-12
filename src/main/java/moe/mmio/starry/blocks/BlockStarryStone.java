@@ -1,6 +1,7 @@
 package moe.mmio.starry.blocks;
 
 import moe.mmio.starry.StarryMod;
+import moe.mmio.starry.items.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
@@ -15,7 +16,7 @@ public class BlockStarryStone extends Block {
 
     public BlockStarryStone(Material material) {
         super(Material.rock);
-        this.setHardness(45.5f);
+        this.setHardness(30.5f);
         this.setResistance(60.5f);
         this.setBlockName("starry_stone");
         this.setBlockTextureName(StarryMod.MODID + ":starry_stone");
@@ -27,7 +28,7 @@ public class BlockStarryStone extends Block {
     public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune) {
         ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
 
-        drops.add(new ItemStack(Blocks.obsidian, 1));
+        drops.add(new ItemStack(ModItems.starry_stone, 1));
 
         return drops;
     }

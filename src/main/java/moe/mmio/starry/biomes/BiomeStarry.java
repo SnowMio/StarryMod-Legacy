@@ -53,6 +53,11 @@ public class BiomeStarry extends BiomeGenBase {
         return 0x551A8B;
     }
 
+    @Override
+    public int getModdedBiomeFoliageColor(int original) {
+        return 0x551A8B;
+    }
+
     @SubscribeEvent
     public void onChunkLoad(ChunkEvent.Load event) {
         World world = event.world;
