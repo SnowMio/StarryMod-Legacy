@@ -2,10 +2,7 @@ package moe.mmio.starry.items;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import moe.mmio.starry.StarryMod;
-import moe.mmio.starry.blocks.BlockHellGravel;
-import moe.mmio.starry.blocks.BlockLegendOre;
-import moe.mmio.starry.blocks.BlockObsidianOre;
-import moe.mmio.starry.blocks.BlockStarryOre;
+import moe.mmio.starry.blocks.*;
 import moe.mmio.starry.creativetabs.ModCreativeTabs;
 import moe.mmio.starry.tools.*;
 import net.minecraft.block.Block;
@@ -53,7 +50,7 @@ public class ModItems {
         starry_ore = new BlockStarryOre(Material.iron).setCreativeTab(StarryModCreativeTab);
         legend_ore = new BlockLegendOre(Material.rock).setCreativeTab(StarryModCreativeTab);
         obsidian_ore = new BlockObsidianOre(Material.rock).setCreativeTab(StarryModCreativeTab);
-        starry_stone = new BlockStarryOre(Material.rock).setCreativeTab(StarryModCreativeTab);
+        starry_stone = new BlockStarryStone(Material.rock).setCreativeTab(StarryModCreativeTab);
 
         hell_gravel = (BlockFalling) new BlockHellGravel(Material.sand).setCreativeTab(StarryModCreativeTab);
     }
