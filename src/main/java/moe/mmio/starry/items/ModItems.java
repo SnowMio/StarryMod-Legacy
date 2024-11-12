@@ -54,20 +54,20 @@ public class ModItems {
         legend_axe = new ItemLegendAxe().setCreativeTab(StarryModCreativeTab);
 
         legend_helmet = new ArmorLegendArmor(0)
-                .setUnlocalizedName(StarryMod.MODID + "legend_helmet")
+                .setUnlocalizedName("legend_helmet")
                 .setTextureName(StarryMod.MODID + "legend_helmet")
                 .setCreativeTab(StarryModCreativeTab);
         legend_chestplate = new ArmorLegendArmor(1)
-                .setUnlocalizedName(StarryMod.MODID + "legend_chestplate")
-                .setTextureName(StarryMod.MODID + "legend_chestplate")
+                .setUnlocalizedName("legend_chestplate")
+                .setTextureName(StarryMod.MODID + ":legend_chestplate")
                 .setCreativeTab(StarryModCreativeTab);
         legend_legging = new ArmorLegendArmor(2)
-                .setUnlocalizedName(StarryMod.MODID + "legend_legging")
-                .setTextureName(StarryMod.MODID + "legend_legging")
+                .setUnlocalizedName("legend_legging")
+                .setTextureName(StarryMod.MODID + ":legend_legging")
                 .setCreativeTab(StarryModCreativeTab);
         legend_boots = new ArmorLegendArmor(3)
-                .setUnlocalizedName(StarryMod.MODID + "legend_boots")
-                .setTextureName(StarryMod.MODID + "legend_boots")
+                .setUnlocalizedName("legend_boots")
+                .setTextureName(StarryMod.MODID + ":legend_boots")
                 .setCreativeTab(StarryModCreativeTab);
 
         starry_ore = new BlockStarryOre(Material.iron).setCreativeTab(StarryModCreativeTab);

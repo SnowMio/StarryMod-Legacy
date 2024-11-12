@@ -15,6 +15,12 @@ tile.obsidian_ore.name=Obsidian Ore
 tile.hell_gravel.name=Hell Gravel
 tile.starry_stone.name=Starry Stone
 
+# armors
+item.legend_helmet.name=Legend Helmet
+item.legend_chestplate.name=Legend Chestplate
+item.legend_leggings.name=Legend Leggings
+item.legend_boots.name=Legend Boots
+
 # itemgroups
 itemGroup.starrymod_tab=Starry Mod
 
@@ -29,3 +35,6 @@ command.querybiome.usage=Usage: /querybiome <biomeID>
 command.querybiome.invalid_id=Error: Invalid biome ID.
 command.querybiome.not_found=No biome found with the specified ID.
 command.querybiome.name=Biome name: %s
+
+# messages
+message.legend_resurrection=Legend Resurrection!

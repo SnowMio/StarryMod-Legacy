@@ -7,6 +7,7 @@ import moe.mmio.starry.biomes.ModBiomes;
 import moe.mmio.starry.commands.CommandLocateBiome;
 import moe.mmio.starry.commands.CommandQueryBiomeID;
 import moe.mmio.starry.effects.ModEffects;
+import moe.mmio.starry.events.EventLegendArmor;
 import moe.mmio.starry.events.EventNoCreeperGriefingBlocks;
 import moe.mmio.starry.items.ModItems;
 import moe.mmio.starry.recipes.ModRecipes;
@@ -38,6 +39,7 @@ public class StarryMod
         // 事件注册
         MinecraftForge.EVENT_BUS.register(new EventNoCreeperGriefingBlocks());
         MinecraftForge.EVENT_BUS.register(new BiomeStarry(215));
+        MinecraftForge.EVENT_BUS.register(new EventLegendArmor());
     }
 
     @EventHandler
