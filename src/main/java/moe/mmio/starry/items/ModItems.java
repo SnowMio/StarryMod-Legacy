@@ -55,7 +55,7 @@ public class ModItems {
 
         legend_helmet = new ArmorLegendArmor(0)
                 .setUnlocalizedName("legend_helmet")
-                .setTextureName(StarryMod.MODID + "legend_helmet")
+                .setTextureName(StarryMod.MODID + ":legend_helmet")
                 .setCreativeTab(StarryModCreativeTab);
         legend_chestplate = new ArmorLegendArmor(1)
                 .setUnlocalizedName("legend_chestplate")

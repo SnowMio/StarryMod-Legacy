@@ -18,7 +18,7 @@ tile.starry_stone.name=Starry Stone
 # armors
 item.legend_helmet.name=Legend Helmet
 item.legend_chestplate.name=Legend Chestplate
-item.legend_leggings.name=Legend Leggings
+item.legend_legging.name=Legend Leggings
 item.legend_boots.name=Legend Boots
 
 # itemgroups
@@ -38,3 +38,6 @@ command.querybiome.name=Biome name: %s
 
 # messages
 message.legend_resurrection=Legend Resurrection!
+
+# potions
+potion.legend_resurrection=Legend Resurrection

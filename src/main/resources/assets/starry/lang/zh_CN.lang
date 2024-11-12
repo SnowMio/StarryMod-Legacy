@@ -15,7 +15,9 @@ itemGroup.starrymod_tab=Starry Mod
 
 item.legend_helmet.name=神圣金属头盔
 item.legend_chestplate.name=神圣金属胸甲
-item.legend_leggings.name=神圣金属护腿
+item.legend_legging.name=神圣金属护腿
 item.legend_boots.name=神圣金属靴子
 
 message.legend_resurrection=神圣重生!
+
+potion.legend_resurrection=神圣重生冷却
