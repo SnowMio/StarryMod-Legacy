@@ -5,7 +5,7 @@
   "description": "Survive, QoL, etc...",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "hps://github.com/SnowMio/StarryMod-Legacy/",
+  "url": "https://github.com/SnowMio/StarryMod-Legacy/",
   "updateUrl": "",
   "authorList": ["MinimalMio"],
   "credits": "The SnowMio Studios",

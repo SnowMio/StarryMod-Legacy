@@ -1,6 +1,7 @@
 package moe.mmio.starry;
 
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import moe.mmio.starry.biomes.BiomeStarry;
 import moe.mmio.starry.biomes.ModBiomes;
 import moe.mmio.starry.commands.CommandLocateBiome;
@@ -37,6 +38,7 @@ public class StarryMod
         MinecraftForge.EVENT_BUS.register(new BiomeStarry(215));
     }
 
+    @EventHandler
     public void serverLoad(FMLServerStartingEvent event) {
         event.registerServerCommand(new CommandLocateBiome());
         event.registerServerCommand(new CommandQueryBiomeID());
