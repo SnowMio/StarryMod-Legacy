@@ -63,8 +63,8 @@ public class BlockLegendOre extends Block {
                 for (int z = playerZ - radius; z <= playerZ + radius; z++) {
                     // 检查是不是 legend_ore
                     if (world.getBlock(x, y, z) == this) {
-                        if (player.ticksExisted % 10 == 0) {
-                            // 每10刻造成1点伤害
+                        if (player.ticksExisted % 8 == 0) {
+                            // 每8刻造成1点伤害
                             player.attackEntityFrom(DamageSource.generic, 1.0f);
                         }
                         return;

@@ -10,4 +10,5 @@ tile.starry_ore.name=幻星矿
 tile.legend_ore.name=神圣金属矿
 tile.obsidian_ore.name=黑曜石矿
 tile.hell_gravel.name=地狱砂砾
+tile.starry_stone.name=幻星石块
 itemGroup.starrymod_tab=Starry Mod

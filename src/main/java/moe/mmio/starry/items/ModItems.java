@@ -35,6 +35,7 @@ public class ModItems {
     public static Block starry_ore;
     public static Block legend_ore;
     public static Block obsidian_ore;
+    public static Block starry_stone;
 
     public static BlockFalling hell_gravel;
 
@@ -52,6 +53,7 @@ public class ModItems {
         starry_ore = new BlockStarryOre(Material.iron).setCreativeTab(StarryModCreativeTab);
         legend_ore = new BlockLegendOre(Material.rock).setCreativeTab(StarryModCreativeTab);
         obsidian_ore = new BlockObsidianOre(Material.rock).setCreativeTab(StarryModCreativeTab);
+        starry_stone = new BlockStarryOre(Material.rock).setCreativeTab(StarryModCreativeTab);
 
         hell_gravel = (BlockFalling) new BlockHellGravel(Material.sand).setCreativeTab(StarryModCreativeTab);
     }
@@ -70,6 +72,7 @@ public class ModItems {
         GameRegistry.registerBlock(starry_ore, starry_ore.getUnlocalizedName());
         GameRegistry.registerBlock(legend_ore, legend_ore.getUnlocalizedName());
         GameRegistry.registerBlock(obsidian_ore, obsidian_ore.getUnlocalizedName());
+        GameRegistry.registerBlock(starry_stone, starry_stone.getUnlocalizedName());
 
         GameRegistry.registerBlock(hell_gravel, hell_gravel.getUnlocalizedName());
     }
