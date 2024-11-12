@@ -1,5 +1,7 @@
 package moe.mmio.starry.biomes;
 
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import moe.mmio.starry.items.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.entity.monster.EntityZombie;
@@ -7,71 +9,57 @@ import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenMinable;
+import net.minecraftforge.event.world.ChunkEvent;
 
 import java.util.Random;
 
 public class BiomeStarry extends BiomeGenBase {
-    public BiomeStarry(int id) {
-        super(id);
+    public BiomeStarry(int biomeId) {
+        super(biomeId);
 
         this.topBlock = Blocks.grass;
-        this.fillerBlock = ModItems.starry_stone;
-        this.theBiomeDecorator.generateLakes = false;
+        this.fillerBlock = Blocks.dirt;
+        this.setColor(0x551A8B);
+        this.setBiomeName("Starry");
+        this.setTemperatureRainfall(0.8f, 0.4f);
 
-        this.setColor(0x4B0082);
-
-        this.spawnableMonsterList.add(new SpawnListEntry(EntityZombie.class, 100, 4, 4));
+        this.spawnableMonsterList.clear();
+        this.spawnableCaveCreatureList.clear();
+        this.spawnableCreatureList.clear();
     }
 
     @Override
-    public boolean canSpawnLightningBolt() {
-        return false;
-    }
-
-    @Override
-    public boolean getEnableSnow() {
-        return false;
+    public int getModdedBiomeGrassColor(int original) {
+        return 0x551A8B;
     }
 
     @Override
     public int getSkyColorByTemp(float temperature) {
-        return 0x4B0082;
+        return 0x551A8B;
     }
 
-    @Override
-    public void decorate(World worldIn, Random random, int chunkX, int chunkZ) {
-        super.decorate(worldIn, random, chunkX, chunkZ);
+    @SubscribeEvent
+    public void onChunkLoad(ChunkEvent.Load event) {
+        World world = event.world;
+        if (world.provider.dimensionId == 0) {
+            int x, y, z;
+            Random rand = new Random();
+            for (x = 0; x < 16; x++) {
+                for (z = 0; z < 16; z++) {
+                    for (y = 1; y < 256; y++) {
+                        if (world.getBiomeGenForCoords(x, z) instanceof BiomeStarry) {
+                            if (world.getBlock(x, y, z) == Blocks.stone) {
+                                world.setBlock(x, y, z, ModItems.starry_stone);
+                            }
 
-        this.theBiomeDecorator.gravelAsSandGen = null;
-        this.theBiomeDecorator.gravelGen = null;
-        this.theBiomeDecorator.diamondGen = null;
-        this.theBiomeDecorator.ironGen = null;
-        this.theBiomeDecorator.coalGen = null;
-        this.theBiomeDecorator.redstoneGen = null;
-        this.theBiomeDecorator.lapisGen = null;
-        this.theBiomeDecorator.goldGen = null;
-
-        for (int i = 0; i < 10; i++) {
-            int x = chunkX + random.nextInt(16);
-            int y = random.nextInt(50);
-            int z = chunkZ + random.nextInt(16);
-            (new WorldGenMinable(ModItems.starry_ore, 4)).generate(worldIn, random, x, y, z);
-        }
-        for (int i = 0; i < 5; i++) {
-            int x = chunkX + random.nextInt(16);
-            int y = random.nextInt(45);
-            int z = chunkZ + random.nextInt(16);
-            (new WorldGenMinable(ModItems.legend_ore, 2)).generate(worldIn, random, x, y, z);
-        }
-    }
-
-    @Override
-    public void genTerrainBlocks(World worldIn, Random random, Block[] blocks, byte[] meta, int x, int z, double noiseVal) {
-        super.genTerrainBlocks(worldIn, random, blocks, meta, x, z, noiseVal);
-
-        for (int i = 0; i < blocks.length; i++) {
-            if (blocks[i] == Blocks.stone) {
-                    blocks[i] = ModItems.starry_stone;
+                            if (rand.nextInt(100) < 5) {
+                                world.setBlock(x, y, z, ModItems.starry_ore);
+                            } else if (rand.nextInt(100) < 3) {
+                                world.setBlock(x, y, z, ModItems.legend_ore);
+                            }
+                        }
+                    }
+                }
             }
         }
     }
