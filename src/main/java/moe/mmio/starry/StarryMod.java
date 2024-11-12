@@ -1,5 +1,6 @@
 package moe.mmio.starry;
 
+import moe.mmio.starry.biomes.ModBiomes;
 import moe.mmio.starry.events.EventNoCreeperGriefingBlocks;
 import moe.mmio.starry.items.ModItems;
 import moe.mmio.starry.recipes.ModRecipes;
@@ -26,6 +27,7 @@ public class StarryMod
         ModItems.mainRegistry();
         ModGeneratorRegistry.initializeGenerators();
         ModRecipes.recipesRegistry();
+        ModBiomes.initModBiomes();
         // 事件注册
         MinecraftForge.EVENT_BUS.register(new EventNoCreeperGriefingBlocks());
     }
