@@ -25,6 +25,7 @@ public class StarryMod
     public static final String MODID = "starry";
     public static final String VERSION = "1.0";
     public static final String MODNAME = "Starry";
+    public static final boolean IS_DEV_BUILD = true;
     /*
      * Welcome to Here!
      */

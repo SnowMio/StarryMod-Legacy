@@ -24,7 +24,11 @@ public class EventOverlayRenderer {
 
         int x = 5;
         int y = 5;
-        mc.fontRenderer.drawString("Starry Mod v" + StarryMod.VERSION, x, y, 0xFFFFFF);
+        if (StarryMod.IS_DEV_BUILD == true) {
+            mc.fontRenderer.drawString("Starry Mod v" + StarryMod.VERSION + EnumChatFormatting.RED + " CI Build Version", x, y, 0xFFFFFF, true);
+        } else {
+            mc.fontRenderer.drawString("Starry Mod v" + StarryMod.VERSION, x, y, 0xFFFFFF, true);
+        }
         mc.fontRenderer.drawString("Day " + day, x, y + 10, 0xFFFFFF);
     }
 }
