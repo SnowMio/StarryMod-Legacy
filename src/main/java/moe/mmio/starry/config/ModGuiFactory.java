@@ -8,9 +8,7 @@ import java.util.Set;
 
 public class ModGuiFactory implements IModGuiFactory {
     @Override
-    public void initialize(Minecraft minecraftInstance) {
-
-    }
+    public void initialize(Minecraft minecraftInstance) {}
 
     @Override
     public Class<? extends GuiScreen> mainConfigGuiClass() {
