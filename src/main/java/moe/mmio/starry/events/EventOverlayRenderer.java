@@ -24,7 +24,7 @@ public class EventOverlayRenderer {
 
         int x = 5;
         int y = 5;
-        if (StarryMod.IS_DEV_BUILD == true) {
+        if (StarryMod.IS_DEV_BUILD) {
             mc.fontRenderer.drawString("Starry Mod v" + StarryMod.VERSION + EnumChatFormatting.RED + " CI Build Version", x, y, 0xFFFFFF, true);
         } else {
             mc.fontRenderer.drawString("Starry Mod v" + StarryMod.VERSION, x, y, 0xFFFFFF, true);
