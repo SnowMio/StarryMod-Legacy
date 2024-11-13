@@ -1,6 +1,7 @@
 package moe.mmio.starry.items;
 
 import moe.mmio.starry.StarryMod;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.boss.EntityDragon;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -9,6 +10,8 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 public class ItemDragonResummoner extends Item {
     public ItemDragonResummoner() {
@@ -20,7 +23,8 @@ public class ItemDragonResummoner extends Item {
     @Override
     public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
         if (world.provider.dimensionId == 1) {
-            if (world.getClosestPlayerToEntity(new EntityDragon(world), 200) == null) {
+            List<EntityDragon> dragons = world.getEntitiesWithinAABB(EntityDragon.class, player.boundingBox.expand(1000.0D, 1000.0D, 1000.0D));
+            if (dragons.isEmpty()) {
                 if (!world.isRemote) {
                     EntityDragon newDragon = new EntityDragon(world);
                     newDragon.setLocationAndAngles(0, 127, 0, 0, 0);
