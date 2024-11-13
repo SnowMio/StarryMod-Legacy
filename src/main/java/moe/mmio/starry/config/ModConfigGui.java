@@ -19,4 +19,13 @@ public class ModConfigGui extends GuiConfig {
                 "Starry Mod Configuration"
         );
     }
+
+    @Override
+    public void onGuiClosed() {
+        super.onGuiClosed();
+
+        if (StarryMod.cfg.hasChanged()) {
+            StarryMod.cfg.save();
+        }
+    }
 }
