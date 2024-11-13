@@ -32,6 +32,9 @@ public class StarryMod
     public static final String MODNAME = "Starry";
     public static final boolean IS_DEV_BUILD = true;
 
+
+    public static Configuration cfg;
+
     public static boolean showInformations;
     public static boolean noCreeperGriefingBlocks;
     public static boolean hasLegendResurrectionEnabled;
@@ -39,7 +42,7 @@ public class StarryMod
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         // 配置文件
-        Configuration cfg = new Configuration(new File(event.getModConfigurationDirectory(), "starrymod.cfg"));
+        cfg = new Configuration(new File(event.getModConfigurationDirectory(), "starrymod.cfg"));
         cfg.load();
 
         showInformations = cfg.getBoolean("showInfomationsInGame", Configuration.CATEGORY_GENERAL, true, "Show informations in game");
