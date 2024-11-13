@@ -9,6 +9,7 @@ import moe.mmio.starry.effects.ModEffects;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
@@ -27,7 +28,7 @@ public class EventLegendArmor {
                     player.addPotionEffect(new PotionEffect(ModEffects.legendResurrection.id, 2400, 0));
                     event.setCanceled(true);
                     player.setHealth(player.getHealth() + 4.0f);
-                    player.addChatMessage(new ChatComponentText(StatCollector.translateToLocal("message.legend_resurrection")));
+                    player.addChatMessage(new ChatComponentText(EnumChatFormatting.YELLOW + StatCollector.translateToLocal("message.legend_resurrection")));
                 }
             }
         }

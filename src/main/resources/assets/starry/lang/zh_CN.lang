@@ -13,11 +13,16 @@ tile.hell_gravel.name=地狱砂砾
 tile.starry_stone.name=幻星石块
 itemGroup.starrymod_tab=Starry Mod
 
+item.dragon_resummoner.name=末影龙重生仪式启动器
+
 item.legend_helmet.name=神圣金属头盔
 item.legend_chestplate.name=神圣金属胸甲
 item.legend_legging.name=神圣金属护腿
 item.legend_boots.name=神圣金属靴子
 
 message.legend_resurrection=神圣重生!
+message.dragonrespawn=重生之龙，末影龙已苏醒!
+message.cannot_dragon_respawn=末影龙尚未被击败，你没有资格使用这个物品。
+message.cannot_use_dragon_respawner=仪式只能在末地举行。
 
 potion.legend_resurrection=神圣重生冷却

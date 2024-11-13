@@ -7,6 +7,7 @@ item.starry_pickaxe.name=Starry Pickaxe
 item.legend_pickaxe.name=Legend Pickaxe
 item.starry_axe.name=Starry Axe
 item.legend_axe.name=Legend Axe
+item.dragon_resummoner.name=Dragon Resummoner
 
 # blocks
 tile.starry_ore.name=Starry Ore
@@ -38,6 +39,9 @@ command.querybiome.name=Biome name: %s
 
 # messages
 message.legend_resurrection=Legend Resurrection!
+message.dragonrespawn=Ender Dragon Reborn!
+message.cannot_dragon_respawn=Ender Dragon not defeated.
+message.cannot_use_dragon_respawner=This item can only used in The End
 
 # potions
 potion.legend_resurrection=Legend Resurrection

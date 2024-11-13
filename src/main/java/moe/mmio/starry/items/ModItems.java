@@ -35,6 +35,8 @@ public class ModItems {
     public static Item legend_legging;
     public static Item legend_boots;
 
+    public static Item dragon_resummoner;
+
     public static Block starry_ore;
     public static Block legend_ore;
     public static Block obsidian_ore;
@@ -52,6 +54,8 @@ public class ModItems {
         legend_sword = new ItemLegendSword().setCreativeTab(StarryModCreativeTab);
         legend_pickaxe = new ItemLegendPickaxe().setCreativeTab(StarryModCreativeTab);
         legend_axe = new ItemLegendAxe().setCreativeTab(StarryModCreativeTab);
+
+        dragon_resummoner = new ItemDragonResummoner().setCreativeTab(StarryModCreativeTab);
 
         legend_helmet = new ArmorLegendArmor(0)
                 .setUnlocalizedName("legend_helmet")
@@ -88,6 +92,8 @@ public class ModItems {
         GameRegistry.registerItem(legend_sword, legend_sword.getUnlocalizedName());
         GameRegistry.registerItem(legend_pickaxe, legend_pickaxe.getUnlocalizedName());
         GameRegistry.registerItem(legend_axe, legend_axe.getUnlocalizedName());
+
+        GameRegistry.registerItem(dragon_resummoner, dragon_resummoner.getUnlocalizedName());
 
         GameRegistry.registerItem(legend_helmet, legend_helmet.getUnlocalizedName());
         GameRegistry.registerItem(legend_chestplate, legend_chestplate.getUnlocalizedName());
