@@ -9,12 +9,14 @@ import moe.mmio.starry.commands.CommandQueryBiomeID;
 import moe.mmio.starry.effects.ModEffects;
 import moe.mmio.starry.events.EventLegendArmor;
 import moe.mmio.starry.events.EventNoCreeperGriefingBlocks;
+import moe.mmio.starry.events.EventOverlayRenderer;
 import moe.mmio.starry.items.ModItems;
 import moe.mmio.starry.recipes.ModRecipes;
 import moe.mmio.starry.worldgen.ModGeneratorRegistry;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import net.minecraft.client.Minecraft;
 import net.minecraftforge.common.MinecraftForge;
 
 @Mod(modid = StarryMod.MODID, version = StarryMod.VERSION,name = StarryMod.MODNAME)
@@ -40,6 +42,7 @@ public class StarryMod
         MinecraftForge.EVENT_BUS.register(new EventNoCreeperGriefingBlocks());
         MinecraftForge.EVENT_BUS.register(new BiomeStarry(215));
         MinecraftForge.EVENT_BUS.register(new EventLegendArmor());
+        MinecraftForge.EVENT_BUS.register(new EventOverlayRenderer());
     }
 
     @EventHandler
