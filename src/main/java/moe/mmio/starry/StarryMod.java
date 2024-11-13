@@ -24,7 +24,7 @@ import net.minecraftforge.common.config.Configuration;
 
 import java.io.File;
 
-@Mod(modid = StarryMod.MODID, version = StarryMod.VERSION,name = StarryMod.MODNAME)
+@Mod(modid = StarryMod.MODID, version = StarryMod.VERSION, name = StarryMod.MODNAME, guiFactory = "moe.mmio.starry.config.ModConfigFactory")
 public class StarryMod
 {
     public static final String MODID = "starry";
