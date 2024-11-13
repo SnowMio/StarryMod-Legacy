@@ -1,7 +1,9 @@
 package moe.mmio.starry;
 
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import jdk.nashorn.internal.runtime.regexp.joni.Config;
 import moe.mmio.starry.biomes.BiomeStarry;
 import moe.mmio.starry.biomes.ModBiomes;
 import moe.mmio.starry.commands.CommandLocateBiome;
@@ -18,6 +20,9 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.config.Configuration;
+
+import java.io.File;
 
 @Mod(modid = StarryMod.MODID, version = StarryMod.VERSION,name = StarryMod.MODNAME)
 public class StarryMod
@@ -26,9 +31,25 @@ public class StarryMod
     public static final String VERSION = "1.0";
     public static final String MODNAME = "Starry";
     public static final boolean IS_DEV_BUILD = true;
-    /*
-     * Welcome to Here!
-     */
+
+    public static boolean showInformations;
+    public static boolean noCreeperGriefingBlocks;
+    public static boolean hasLegendResurrectionEnabled;
+
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent event) {
+        // 配置文件
+        Configuration cfg = new Configuration(new File(event.getModConfigurationDirectory(), "starrymod.cfg"));
+        cfg.load();
+
+        showInformations = cfg.getBoolean("showInfomationsInGame", Configuration.CATEGORY_GENERAL, true, "Show informations in game");
+        noCreeperGriefingBlocks = cfg.getBoolean("noCreeperGriefingBlocks", Configuration.CATEGORY_GENERAL, true, "Control Creepers explosive can destroy blocks");
+        hasLegendResurrectionEnabled = cfg.getBoolean("legendResurrectionEnabled", Configuration.CATEGORY_GENERAL, true, "Control Legend Resurrection");
+
+        if (cfg.hasChanged()) {
+            cfg.save();
+        }
+    }
 
     @EventHandler
     public void init(FMLInitializationEvent event)

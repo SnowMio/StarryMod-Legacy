@@ -14,7 +14,7 @@ public class EventOverlayRenderer {
     public void onRenderOverlay(RenderGameOverlayEvent.Text event) {
         Minecraft mc = Minecraft.getMinecraft();
 
-        if (mc.theWorld == null || mc.thePlayer == null) {
+        if (!StarryMod.showInformations || mc.theWorld == null || mc.thePlayer == null) {
             return;
         }
 
@@ -29,6 +29,6 @@ public class EventOverlayRenderer {
         } else {
             mc.fontRenderer.drawString("Starry Mod v" + StarryMod.VERSION, x, y, 0xFFFFFF, true);
         }
-        mc.fontRenderer.drawString("Day " + day, x, y + 10, 0xFFFFFF);
+        mc.fontRenderer.drawString("Day " + day, x, y + 10, 0xFFFFFF, true);
     }
 }

@@ -3,6 +3,7 @@ package moe.mmio.starry.events;
 import akka.japi.Effect;
 import cpw.mods.fml.common.event.FMLModDisabledEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import moe.mmio.starry.StarryMod;
 import moe.mmio.starry.armors.ArmorLegendArmor;
 import moe.mmio.starry.effects.EffectLegendResurrection;
 import moe.mmio.starry.effects.ModEffects;
@@ -16,6 +17,10 @@ import net.minecraftforge.event.entity.living.LivingHurtEvent;
 public class EventLegendArmor {
     @SubscribeEvent
     public void onPlayerHurt(LivingHurtEvent event) {
+        if (!StarryMod.hasLegendResurrectionEnabled) {
+            return;
+        }
+
         if (!(event.entity instanceof EntityPlayer)) {
             return;
         }
