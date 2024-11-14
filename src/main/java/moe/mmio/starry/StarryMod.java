@@ -4,6 +4,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import jdk.nashorn.internal.runtime.regexp.joni.Config;
+import moe.mmio.starry.api.ItemWings;
 import moe.mmio.starry.biomes.BiomeStarry;
 import moe.mmio.starry.biomes.ModBiomes;
 import moe.mmio.starry.commands.CommandLocateBiome;
@@ -70,6 +71,7 @@ public class StarryMod
         MinecraftForge.EVENT_BUS.register(new EventLegendArmor());
         MinecraftForge.EVENT_BUS.register(new EventOverlayRenderer());
         MinecraftForge.EVENT_BUS.register(new EventWitherFight());
+        MinecraftForge.EVENT_BUS.register(new ItemWings());
     }
 
     @EventHandler

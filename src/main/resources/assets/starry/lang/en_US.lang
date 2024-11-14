@@ -22,6 +22,8 @@ item.legend_chestplate.name=Legend Chestplate
 item.legend_legging.name=Legend Leggings
 item.legend_boots.name=Legend Boots
 
+item.jetpack.name=Jetpack
+
 # itemgroups
 itemGroup.starrymod_tab=Starry Mod
 

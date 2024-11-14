@@ -2,6 +2,7 @@ package moe.mmio.starry.items;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import moe.mmio.starry.StarryMod;
+import moe.mmio.starry.api.ItemWings;
 import moe.mmio.starry.armors.ArmorLegendArmor;
 import moe.mmio.starry.blocks.*;
 import moe.mmio.starry.creativetabs.ModCreativeTabs;
@@ -10,6 +11,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockFalling;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
 public class ModItems {
@@ -34,6 +36,8 @@ public class ModItems {
     public static Item legend_chestplate;
     public static Item legend_legging;
     public static Item legend_boots;
+
+    public static ItemWings jetpack;
 
     public static Item dragon_resummoner;
 
@@ -74,6 +78,14 @@ public class ModItems {
                 .setTextureName(StarryMod.MODID + ":legend_boots")
                 .setCreativeTab(StarryModCreativeTab);
 
+        jetpack = new ItemWings()
+                .setUnlocalizedName("jetpack")
+                .setTextureName(StarryMod.MODID + ":jetpack")
+                .setSpeed(0.2)
+                .setDurability(1500)
+                .setRepairItem(Items.iron_ingot)
+                .setMaxTime(2000);
+
         starry_ore = new BlockStarryOre(Material.iron).setCreativeTab(StarryModCreativeTab);
         legend_ore = new BlockLegendOre(Material.rock).setCreativeTab(StarryModCreativeTab);
         obsidian_ore = new BlockObsidianOre(Material.rock).setCreativeTab(StarryModCreativeTab);
@@ -99,6 +111,8 @@ public class ModItems {
         GameRegistry.registerItem(legend_chestplate, legend_chestplate.getUnlocalizedName());
         GameRegistry.registerItem(legend_legging, legend_legging.getUnlocalizedName());
         GameRegistry.registerItem(legend_boots, legend_boots.getUnlocalizedName());
+
+        GameRegistry.registerItem(jetpack, jetpack.getUnlocalizedName());
 
         GameRegistry.registerBlock(starry_ore, starry_ore.getUnlocalizedName());
         GameRegistry.registerBlock(legend_ore, legend_ore.getUnlocalizedName());
