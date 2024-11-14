@@ -42,6 +42,7 @@ message.legend_resurrection=Legend Resurrection!
 message.dragonrespawn=Ender Dragon Reborn!
 message.cannot_dragon_respawn=Ender Dragon not defeated.
 message.cannot_use_dragon_respawner=This item can only used in The End
+message.wither_kill=The wither hitcap is 10.
 
 # potions
 potion.legend_resurrection=Legend Resurrection

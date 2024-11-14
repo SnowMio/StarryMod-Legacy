@@ -24,5 +24,6 @@ message.legend_resurrection=神圣重生!
 message.dragonrespawn=重生之龙，末影龙已苏醒!
 message.cannot_dragon_respawn=末影龙尚未被击败，你没有资格使用这个物品。
 message.cannot_use_dragon_respawner=仪式只能在末地举行。
+message.wither_kill=凋灵BOSS战中打满全场受击需要小于10次。
 
 potion.legend_resurrection=神圣重生冷却
