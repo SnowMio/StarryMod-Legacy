@@ -78,13 +78,14 @@ public class ModItems {
                 .setTextureName(StarryMod.MODID + ":legend_boots")
                 .setCreativeTab(StarryModCreativeTab);
 
-        jetpack = new ItemWings()
+        jetpack = (ItemWings) new ItemWings()
                 .setUnlocalizedName("jetpack")
                 .setTextureName(StarryMod.MODID + ":jetpack")
                 .setSpeed(0.2)
                 .setDurability(1500)
                 .setRepairItem(Items.iron_ingot)
-                .setMaxTime(2000);
+                .setMaxTime(2000)
+                .setCreativeTab(StarryModCreativeTab);
 
         starry_ore = new BlockStarryOre(Material.iron).setCreativeTab(StarryModCreativeTab);
         legend_ore = new BlockLegendOre(Material.rock).setCreativeTab(StarryModCreativeTab);
