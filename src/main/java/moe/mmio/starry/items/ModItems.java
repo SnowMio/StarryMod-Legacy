@@ -38,8 +38,6 @@ public class ModItems {
 
     public static Item dragon_resummoner;
 
-    public static Item ultimate_crusher;
-
     public static Block starry_ore;
     public static Block legend_ore;
     public static Block obsidian_ore;
@@ -59,10 +57,6 @@ public class ModItems {
         legend_axe = new ItemLegendAxe().setCreativeTab(StarryModCreativeTab);
 
         dragon_resummoner = new ItemDragonResummoner().setCreativeTab(StarryModCreativeTab);
-
-        ultimate_crusher = new ItemUltimateCrusher().setUnlocalizedName("ultimate_crusher")
-                .setTextureName(StarryMod.MODID + "ultimate_crusher")
-                .setMaxStackSize(1).setCreativeTab(StarryModCreativeTab);
 
         legend_helmet = new ArmorLegendArmor(0)
                 .setUnlocalizedName("legend_helmet")
@@ -101,8 +95,6 @@ public class ModItems {
         GameRegistry.registerItem(legend_axe, legend_axe.getUnlocalizedName());
 
         GameRegistry.registerItem(dragon_resummoner, dragon_resummoner.getUnlocalizedName());
-
-        GameRegistry.registerItem(ultimate_crusher, ultimate_crusher.getUnlocalizedName());
 
         GameRegistry.registerItem(legend_helmet, legend_helmet.getUnlocalizedName());
         GameRegistry.registerItem(legend_chestplate, legend_chestplate.getUnlocalizedName());
