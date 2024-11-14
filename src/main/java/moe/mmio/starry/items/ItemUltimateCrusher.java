@@ -15,9 +15,10 @@ public class ItemUltimateCrusher extends Item {
     @Override
     public boolean onBlockStartBreak(ItemStack itemStack, int x, int y, int z, EntityPlayer player) {
         World world = player.worldObj;
-        Block block = world.getBlock(x, y, z);
 
-        world.setBlockToAir(x, y, z);
+        if (!world.isRemote) {
+            world.setBlockToAir(x, y, z);
+        }
 
         // Block dont drop items
         return true;
