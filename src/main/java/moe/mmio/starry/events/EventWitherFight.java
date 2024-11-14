@@ -93,7 +93,9 @@ public class EventWitherFight {
         if (isWearingFullSet(player) && isWitherPresent(world)) {
             for (Object entity : world.loadedEntityList) {
                 if (entity instanceof EntityWither) {
-                    ((EntityWither) entity).setDead();
+                    player.attackEntityFrom(DamageSource.generic, Float.MAX_VALUE);
+                    EntityWither wither = (EntityWither) entity;
+                    wither.setDead();
                     return;
                 }
             }
