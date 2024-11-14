@@ -5,11 +5,14 @@ import net.minecraft.entity.EntityTracker;
 import net.minecraft.entity.boss.EntityWither;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+
+import static moe.mmio.starry.armors.ArmorLegendArmor.isWearingFullSet;
 
 public class EventWitherFight {
     private int hitCounter = 10;
@@ -33,7 +36,7 @@ public class EventWitherFight {
                 hitCounter--;
 
                 if (hitCounter <= 0) {
-                    player.setDead();
+                    player.attackEntityFrom(DamageSource.generic, Float.MAX_VALUE);
                     player.addChatMessage(new ChatComponentText(StatCollector.translateToLocal("message.wither_kill")));
                     hitCounter = 10;
                 }
@@ -53,6 +56,28 @@ public class EventWitherFight {
                         EntityWither wither = (EntityWither) entity;
                         wither.setDead();
                         world.createExplosion(null, wither.posX, wither.posY, wither.posZ, 0.0F, false);
+                    }
+                }
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public void onWitherSpawn(EntityJoinWorldEvent event) {
+        if (event.entity instanceof EntityWither) {
+            World world = event.world;
+
+            if (isWitherPresent(world)) {
+                event.setCanceled(true);
+                return;
+            }
+
+            for (Object obj : world.playerEntities) {
+                if (obj instanceof EntityPlayer) {
+                    EntityPlayer player = (EntityPlayer) obj;
+                    if (isWearingFullSet(player)) {
+                        event.setCanceled(true);
+                        return;
                     }
                 }
             }
