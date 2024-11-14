@@ -2,7 +2,6 @@ package moe.mmio.starry.items;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import moe.mmio.starry.StarryMod;
-import moe.mmio.starry.api.ItemWings;
 import moe.mmio.starry.armors.ArmorLegendArmor;
 import moe.mmio.starry.blocks.*;
 import moe.mmio.starry.creativetabs.ModCreativeTabs;

@@ -9,13 +9,13 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-/* DEPARTED API WARNING
+/* WARN: DEPARTED API WARNING
  * This API is departed.
  *
  * Affected class:
  * <NONE>
  */
-public class ItemWings extends ItemArmor {
+class ItemWings extends ItemArmor {
     private double flySpeed = 0.1;
     private int durabilityCost = 10;
     private Item repairItem = Items.feather;
