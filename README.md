@@ -4,6 +4,8 @@
 
 > 让 Minecraft 1.7.10 重获辉煌！
 
+[Create a 1.7.10 Forge Mod Template](https://github.com/anatawa12/ForgeGradle-example)
+
 在当前 Minecraft 的高版本（如 1.18.2、1.20.1 等）成为主流的环境中，本模组却专为 Minecraft 1.7.10 版本开发。
 
 我们的理念：
